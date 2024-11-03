@@ -45,6 +45,41 @@ def await_key_press():
     elif key_pressed == 's':
         Move.throttle_decrease()
 
+class Power:
+    def power_on():
+        print("Power turned on.")
+
+    def power_off():
+        print("Power turned off.")
+
+    def power_switch():
+        key_pressed = input("Power on? (y/n): ")
+        if key_pressed == 'y':
+            Power.power_on()
+        elif key_pressed == 'n':
+            Power.power_off()
+        else:
+            print("Invalid input.")
+
+class GPS:
+    latitude = 0.00
+    longitude = 0.00
+    altitude = 0.00
+
+    def get_latitude():
+        print(GPS.latitude)
+    def get_longitude():
+        print(GPS.longitude)
+    def get_altitude():
+        print(GPS.altitude)
+
+    def set_latitude(lat):
+        GPS.latitude = lat
+    def set_longitude(lon):
+        GPS.longitude = lon
+    def set_altitude(alt):
+        GPS.altitude = alt
+
 if __name__ == '__main__':
     while 1:
         await_key_press()
