@@ -80,6 +80,16 @@ class GPS:
     def set_altitude(alt):
         GPS.altitude = alt
 
+class Connection:
+    def broadcast_network():
+        print("Local area network is now broadcasting. . .")
+    
+    def connect_to_pc():
+        print("Drone is now connected to PC.")
+    
+    def disconnect_from_pc():
+        print("Drone is now disconnected from PC.")
+
 if __name__ == '__main__':
     while 1:
         await_key_press()
